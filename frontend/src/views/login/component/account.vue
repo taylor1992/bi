@@ -64,7 +64,7 @@ import {Session} from '/@/utils/storage';
 import {formatAxis} from '/@/utils/formatTime';
 import {NextLoading} from '/@/utils/loading';
 import {useUserApi} from "/@/api/useSystemApi/user";
-import {useUserInfo} from "/@/stores/userInfo";
+import {useUserStore} from "/@/stores/user";
 
 // 定义变量内容
 const storesThemeConfig = useThemeConfig();
@@ -94,7 +94,7 @@ const onSignIn = async () => {
       .then(async res => {
         Session.set('token', res.data.token);
         // Session.set('userInfo', res.data);
-        await useUserInfo().setUserInfos();
+        await useUserStore().setUserInfos();
         await initBackEndControlRoutes();
         // await initFrontEndControlRoutes();
         signInSuccess(false);
