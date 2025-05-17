@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @author: xiaobai
-from contextvars import ContextVar
 import typing
+from contextvars import ContextVar
 
 
 class Local:

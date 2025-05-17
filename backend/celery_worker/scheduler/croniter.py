@@ -3,17 +3,18 @@
 
 from __future__ import absolute_import, print_function, division
 
+import binascii
+import calendar
+import datetime
+import inspect
 import math
+import random
 import re
 import sys
-import inspect
 from time import time
-import datetime
+
 from dateutil.relativedelta import relativedelta
 from dateutil.tz import tzutc
-import calendar
-import binascii
-import random
 
 try:
     from collections import OrderedDict

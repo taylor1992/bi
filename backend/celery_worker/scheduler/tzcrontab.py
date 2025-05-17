@@ -1,12 +1,11 @@
 # coding=utf-8
 """Timezone aware Cron schedule Implementation."""
 
-import pytz
-from collections import namedtuple
 import datetime as dt
+from collections import namedtuple
 
+import pytz
 from celery import schedules
-
 
 schedstate = namedtuple('schedstate', ('is_due', 'next'))
 

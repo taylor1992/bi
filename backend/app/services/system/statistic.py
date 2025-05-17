@@ -1,10 +1,9 @@
 import datetime
 
-from sqlalchemy import text
-
 from app.models.api_models import ProjectInfo, ModuleInfo, ApiInfo, ApiCase, ApiTestReport
 from app.models.sys_models import User
 from app.utils.basic_function import get_today_start, get_today_end
+from sqlalchemy import text
 
 
 class StatisticService:

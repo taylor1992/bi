@@ -1,28 +1,28 @@
 # coding=utf-8
 
-import logging
 import datetime as dt
-# from multiprocessing.util import Finalize
-from billiard.five import values, items
-from kombu.utils.encoding import safe_str, safe_repr
+import logging
 from multiprocessing.util import Finalize
 
 import sqlalchemy
+from app.config import config
+# from multiprocessing.util import Finalize
+from billiard.five import values, items
 from celery import current_app
 from celery import schedules
 from celery.beat import Scheduler, ScheduleEntry
 from celery.utils.log import get_logger
 from celery.utils.time import maybe_make_aware
+from kombu.utils.encoding import safe_str, safe_repr
 from kombu.utils.json import dumps, loads
 
-from app.config import config
-from .session import session_cleanup
-from .session import SessionManager
 from .models import (
     PeriodicTask, PeriodicTaskChanged,
     CrontabSchedule, IntervalSchedule,
     SolarSchedule,
 )
+from .session import SessionManager
+from .session import session_cleanup
 
 # This scheduler must wake up more frequently than the
 # regular of 5 minutes because it needs to take external

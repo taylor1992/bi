@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 # @author: xiaobai
+import logging
 import os
 import sys
-import logging
+
 from loguru import logger
 
-from config import config
 from app.corelibs.local import g
 from app.utils import create_dir
-
 # 创建日志文件名
 from app.utils.common import get_str_uuid
+from config import config
 
 
 def logger_file() -> str:

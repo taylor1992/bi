@@ -2,13 +2,13 @@
 # @author: xiaobai
 import datetime as dt
 
+from app.models.api_models import ModuleInfo, ProjectInfo
+from app.schemas.api.timed_task import TimedTasksQuerySchema
 from sqlalchemy import Column, Integer, String, DateTime, Boolean, insert, update, select
 from sqlalchemy.orm import aliased
 
-from app.models.api_models import ModuleInfo, ProjectInfo
 from app.models.base import Base
 from app.models.system_models import User
-from app.schemas.api.timed_task import TimedTasksQuerySchema
 
 
 class TimedTask(Base):

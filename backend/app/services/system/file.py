@@ -1,15 +1,16 @@
 import os
 import typing
 import uuid
+
+import aiofiles
 from fastapi import UploadFile
 from fastapi.responses import FileResponse, HTMLResponse
 from loguru import logger
-from config import config
+
 from app.models.system_models import FileInfo
 from app.schemas.system.file import FileIn, FileId
-import aiofiles
-
 from app.utils.common import get_str_uuid
+from config import config
 
 
 class FileService:

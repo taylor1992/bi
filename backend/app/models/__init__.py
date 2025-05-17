@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 # @author: xiaobai
-import asyncio
 
-from loguru import logger
 from app.db.sqlalchemy import engine
 from app.models.base import Base
 

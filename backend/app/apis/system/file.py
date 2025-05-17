@@ -1,8 +1,8 @@
 from fastapi import APIRouter, UploadFile, File
 
-from app.utils.response import HttpResponse
 from app.schemas.system.file import FileId
 from app.services.system.file import FileService
+from app.utils.response import HttpResponse
 
 router = APIRouter()
 

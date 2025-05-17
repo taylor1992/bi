@@ -1,19 +1,18 @@
 # coding=utf-8
 
 import datetime as dt
-import pytz
 
+import pytz
 import sqlalchemy as sa
+from celery import schedules
+from celery.utils.log import get_logger
 from sqlalchemy import func
 from sqlalchemy.event import listen
 from sqlalchemy.orm import relationship, foreign, remote
 from sqlalchemy.sql import select, insert, update
 
-from celery import schedules
-from celery.utils.log import get_logger
-
-from .tzcrontab import TzAwareCrontab
 from .session import ModelBase
+from .tzcrontab import TzAwareCrontab
 
 logger = get_logger('scheduler.models')
 

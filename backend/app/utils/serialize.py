@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # @author: xiaobai
-from datetime import datetime
 import typing
+from datetime import datetime
+
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import Select, select, func, literal_column, Row
 from sqlalchemy.orm import noload, DeclarativeMeta

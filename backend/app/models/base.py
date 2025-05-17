@@ -9,9 +9,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.ext.declarative import as_declarative
 from sqlalchemy.orm import mapped_column, noload
 
-from app.utils.serialize import default_serialize
 from app.db.sqlalchemy import async_transaction
 from app.utils.context import AppTraceId, SQLAlchemySession, FastApiRequest
+from app.utils.serialize import default_serialize
 
 T = typing.TypeVar("T", Select, "Query[Any]")
 

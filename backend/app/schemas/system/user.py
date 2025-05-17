@@ -3,6 +3,7 @@
 import typing
 
 from pydantic import BaseModel, Field
+
 from app.schemas.base import BaseSchema
 from app.utils.des import decrypt_rsa_password
 

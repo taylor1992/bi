@@ -1,8 +1,9 @@
 import traceback
+import typing
 
 from fastapi.encoders import jsonable_encoder
 from loguru import logger
-import typing
+
 from app.corelibs import g
 from app.corelibs.codes import CodeEnum
 from app.models.system_models import Menu

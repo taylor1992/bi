@@ -3,10 +3,10 @@
 import json
 import pickle
 import typing
+from redis.typing import KeyT, FieldT, EncodableT, AnyFieldT
 
 from redis import Redis as SyncRedis
 from redis import asyncio as aioredis
-from redis.typing import KeyT, FieldT, EncodableT, AnyFieldT
 
 
 class MyAsyncRedis(aioredis.Redis):

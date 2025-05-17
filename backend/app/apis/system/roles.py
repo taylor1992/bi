@@ -1,7 +1,7 @@
 from app.corelibs.custom_router import APIRouter
-from app.utils.response import HttpResponse
 from app.schemas.system.roles import RoleQuery, RoleIn, RoleDel
 from app.services.system.role import RolesService
+from app.utils.response import HttpResponse
 
 router = APIRouter()
 
