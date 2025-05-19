@@ -1,12 +1,11 @@
-<template>
+<!-- <template>
   <div class="layout-logo" v-if="setShowLogo" @click="onThemeConfigChange">
     <img :src="getLogo" class="layout-logo-medium-img"/>
-    <!--    <span>{{ themeConfig.globalTitle }}</span>-->
   </div>
   <div class="layout-logo-size" v-else @click="onThemeConfigChange">
     <img :src="getLogo" class="layout-logo-size-img"/>
   </div>
-</template>
+</template> -->
 
 <script setup lang="ts" name="layoutLogo">
 import {computed} from 'vue';
